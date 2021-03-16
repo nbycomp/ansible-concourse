@@ -12,6 +12,8 @@
   register: installed_version
   changed_when: false
   when: binary.stat is defined and binary.stat.exists
+  check_mode: no
+
 
 - name: check needs install
   set_fact:
